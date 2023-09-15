@@ -25,5 +25,5 @@ int main()
 	    else
 	        cout<<b<<"\n";
 	}
-	cout<<a<<"\n"<<b<<"\n"<<c<<"\n";
+	cout<<"\n"<<a<<"\n"<<b<<"\n"<<c<<"\n";
 }
