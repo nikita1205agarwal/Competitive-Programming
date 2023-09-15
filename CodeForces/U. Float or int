@@ -1,0 +1,16 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	long double n, f;
+	cin>>n;
+	int i = floor(n);
+	if(i==n){
+		cout<<"int "<<i<<"\n";
+	}
+	else{
+		cout<<"float "<<i<<" "<<(n-i)<<"\n";
+	}
+}
+
