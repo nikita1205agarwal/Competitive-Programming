@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long n;
+	cin>>n;
+	int year=n/365;
+	n=n-year*365;
+	int month=n/30;
+	int day=n-month*30;
+	cout<<year<<" years\n";
+	cout<<month<<" months\n";
+	cout<<day<<" days\n";
+}
