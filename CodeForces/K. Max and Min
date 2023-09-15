@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int a, b, c;
+	cin>>a>>b>>c;
+
+	//using inbuilt method
+	cout<<min(a,min(b,c))<<" "<<max(a,max(b,c))<<"\n";
+
+	//without using inbuilt method
+	int mini, maxi;
+	cin>>a>>b>>c;
+
+	if(a>b && a>c){
+		maxi=a;
+		mini=(b<c)?b:c;
+	}
+	else if(b>c){
+		maxi=b;
+		mini=(a<c)?a:c;
+	}
+	else{
+		maxi=c;
+		mini=(a<b)?a:b;
+	}
+	cout<<mini<<" "<<maxi<<"\n";
+
+
+}
