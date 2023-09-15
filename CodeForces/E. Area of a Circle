@@ -1,0 +1,11 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main()
+{
+	double radius, pi = 3.141592653, area;
+	cin>>radius;
+    cout << fixed << setprecision(9);
+    area = pi*radius*radius;
+    cout<<area<<"\n";
+}
