@@ -1,0 +1,17 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int a, b;
+	cin>>a>>b;
+
+	//using if-else
+	if(a>=b)
+		cout<<"Yes"<<"\n";
+	else
+		cout<<"No"<<"\n";
+
+	//ternary operator
+	cout<<((a>=b)?"Yes":"No")<<"\n";
+}
