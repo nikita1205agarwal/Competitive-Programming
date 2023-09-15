@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	string fname1, sname1, fname2, sname2;
+	cin>>fname1;
+	cin>>sname1;
+	cin>>fname2;
+	cin>>sname2;
+
+	//== operator
+	if(sname1 == sname2)
+		cout<<"ARE Brothers"<<"\n";
+	else
+		cout<<"NOT"<<"\n";
+
+	//compare method
+	if(sname1.compare(sname2) == 0)
+		cout<<"ARE Brothers"<<"\n";
+	else
+		cout<<"NOT"<<"\n";
+}
