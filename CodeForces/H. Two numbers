@@ -1,0 +1,19 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int a, b;
+	cin>>a>>b;
+	cout<<a/b<<" "<<a*1.0/b<<"\n";
+
+	//using inbuilt methods
+    cout <<"floor "<<a<<" / "<<b<<" = "<< floor(a*1.0/b)<<"\n";
+    cout <<"ceil "<<a<<" / "<<b<<" = "<< ceil(a*1.0/b)<<"\n";
+    cout <<"round "<<a<<" / "<<b<<" = "<< round(a*1.0/b)<<"\n";
+
+    //without using inbuilt methods
+    cout <<"floor "<<a<<" / "<<b<<" = "<< a/b<<"\n";
+    cout <<"ceil "<<a<<" / "<<b<<" = "<< (a+b-1)/b<<"\n";
+    cout <<"round "<<a<<" / "<<b<<" = "<< (2*a+b)/(2*b)<<"\n";
+}
