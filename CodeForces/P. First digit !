@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, t;
+    cin>>n;
+    while(n!=0){
+        t=n%10;
+        n=n/10;
+    }
+    if(t%2==0)
+        cout<<"EVEN\n";
+    else
+        cout<<"ODD\n";
+}
