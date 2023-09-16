@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a, b, count=0;
+	cin>>a>>b;
+	for(int i=a;i<=b;i++){
+		int x=i;
+		while(x!=0)
+		{
+			if(!(x%10==4 || x%10==7))
+				break;
+			x=x/10;
+		}
+		if(x==0){
+			count++;
+			cout<<i<<" ";
+		}
+	}
+	if(count==0)
+		cout<<-1;
+	cout<<"\n";
+}
