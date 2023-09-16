@@ -1,0 +1,19 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	long n, temp, rev=0;
+    cin>>n;
+    temp = n;
+    while(temp!=0)
+    {
+        rev=rev*10+temp%10;
+        temp/=10; 
+    }
+    cout<<rev<<"\n";
+    if(n==rev)
+    	cout<<"YES\n";
+    else
+    	cout<<"NO\n"; 
+}
