@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int x, y, i;
+	long sum=0;
+	cin>>x>>y;
+	if(x>y){
+		i=x;
+		x=y;
+		y=i;
+	}
+	if(x%2==0)
+		i=x+1;
+	else
+		i=x+2;
+	for(;i<y;i+=2)
+		sum+=i;
+	cout<<sum<<"\n";
+}
