@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, value, index;
+	cin>>n;
+	int a[n];
+	for(int i=0;i<n;i++)
+		cin>>a[i];
+	value = a[0];
+	index=1;
+	for(int i=1;i<n;i++){
+		if(value>a[i]){
+			value=a[i];
+			index=i+1;
+		}
+	}
+	cout<<value<<" "<<index<<"\n";
+}
