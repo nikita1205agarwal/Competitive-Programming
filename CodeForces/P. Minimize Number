@@ -6,13 +6,13 @@ int main() {
     int N;
     cin >> N;
 
-    int A[N];
+    long A[N];
 
     for (int i = 0; i < N; ++i) {
         cin >> A[i];
     }
 
-    int maxOperations = 0;
+    long maxOperations = 0;
     bool allEven = true;
 
     for (int i = 0; i < N; ++i) {
@@ -23,15 +23,13 @@ int main() {
     }
 
     while (allEven) {
+        maxOperations++;
         for (int i = 0; i < N; ++i) {
             A[i] /= 2;
             if (A[i] % 2 != 0) {
                 allEven = false;
                 break;
             }
-        }
-        if (allEven) {
-            maxOperations++;
         }
     }
 
