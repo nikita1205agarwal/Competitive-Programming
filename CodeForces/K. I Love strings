@@ -15,13 +15,17 @@ int main() {
         int i = 0, j = 0;
 
         while (i < S.length() || j < T.length()) {
-                result += S[i];
-                i++;
+            if (i < S.length()) {
+            result += S[i];
+            i++;
+            }
+            if (j < T.length()) {
                 result += T[j];
                 j++;
+            }
         }
         if(i < S.length()){
-            for(;i<i < S.length();i++)
+            for(;i < S.length();i++)
                 result += S[i];
         }
         if(j < T.length()){
