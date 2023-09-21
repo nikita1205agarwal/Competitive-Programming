@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int N, M, X, Y;
+
+    cin >> N >> M;
+
+    char A[N][M];
+
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+            cin >> A[i][j];
+        }
+    }
+
+    cin >> X >> Y;
+
+    bool allNeighborsX = true;
+
+    for (int dx = -1; dx <= 1; dx++) {
+        for (int dy = -1; dy <= 1; dy+=2) {
+            int nx = X-1 + dx;
+            int ny = Y-1 + dy;
+
+            if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
+                if (A[nx][ny] != 'x') {
+                    allNeighborsX = false;
+                    break;
+                }
+            }
+        }
+        if (!allNeighborsX) {
+            break;
+        }
+    }
+
+    if (allNeighborsX) {
+        cout << "yes\n";
+    } else {
+        cout << "no\n";
+    }
+
+    return 0;
+}
