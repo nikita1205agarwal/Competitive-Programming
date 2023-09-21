@@ -9,11 +9,11 @@ int main() {
         if (S[i] == ',') {
             S[i] = ' ';
         }
-        else if (isupper(c)) {
-            c = tolower(c);
+        else if (isupper(S[i])) {
+            S[i] = tolower(S[i]);
         }
         else
-            c = toupper(c);
+            S[i] = toupper(S[i]);
     }
 
     cout << S << '\n';
