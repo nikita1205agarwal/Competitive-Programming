@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int A[N];
+
+    for (int i = 0; i < N; ++i) {
+        cin >> A[i];
+    }
+
+    int minNumber = A[0], maxNumber = A[0];
+    int minIndex = 0, maxIndex = 0;
+
+    for (int i = 1; i < N; ++i) {
+        if (A[i] < minNumber) {
+            minNumber = A[i];
+            minIndex = i;
+        }
+        if (A[i] > maxNumber) {
+            maxNumber = A[i];
+            maxIndex = i;
+        }
+    }
+
+    int temp = A[minIndex];
+    A[minIndex] = A[maxIndex];
+    A[maxIndex] = temp;
+
+    for (int i = 0; i < N; ++i) {
+        cout << A[i] << " ";
+    }
+    cout << "\n";
+
+    return 0;
+}
