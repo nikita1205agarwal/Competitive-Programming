@@ -14,6 +14,7 @@ int main() {
     
     for(int i=0;i<26;i++)
         if(freq[i]!=0)
-            cout<<freq[i]<<"\n";
+            cout<<freq[i]<<" ";
+    cout<<"\n";
     return 0;
 }
