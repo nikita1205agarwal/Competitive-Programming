@@ -9,7 +9,7 @@ int main() {
     string s;
     cin>>s;
 
-    string res=s[0];
+    string res=s[0]+"";
     for(int i=1;i<n;i++)
     	if(res[i-1]!=s[i])
     		res+=s[i];
