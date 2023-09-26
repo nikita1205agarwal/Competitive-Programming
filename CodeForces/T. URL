@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string url;
+    getline(cin, url); 
+
+    string params[] = {"username", "pwd", "profile", "role", "key"};
+    int n = sizeof(params) / sizeof(params[0]);
+
+    for (int i = 0; i < n; i++) {
+        auto param_pos = url.find(params[i]+"=");
+        auto ampersand_pos = url.find('&', param_pos);
+        string param_value = url.substr(param_pos + params[i].length()+1, ampersand_pos - (param_pos + params[i].length()+1));
+        cout << params[i] << ": " << param_value << '\n';
+    }
+
+    return 0;
+}
