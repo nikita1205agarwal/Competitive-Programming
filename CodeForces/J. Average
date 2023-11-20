@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+double calculateAverage(double arr[], int N) {
+    double sum = 0;
+    for (int i = 0; i < N; ++i) {
+        sum += arr[i];
+    }
+    return sum/N;
+}
+
+int main() {
+    int N;
+    cin >> N;
+
+    double numbers[N];
+    for (int i = 0; i < N; ++i) {
+        cin >> numbers[i];
+    }
+
+    double average = calculateAverage(numbers, N);
+    cout << fixed << setprecision(7) << average << '\n';
+
+    return 0;
+}
