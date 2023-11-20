@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void shiftArrayRight(int A[], int N, int X) {
+    X = X % N;
+
+    for (int i = 0; i < X; ++i) {
+        int temp = A[N - 1];
+        for (int j = N - 1; j > 0; --j) {
+            A[j] = A[j - 1];
+        }
+        A[0] = temp;
+    }
+
+    for (int i = 0; i < N; ++i) {
+        cout << A[i] << " ";
+    }
+    cout << '\n';
+}
+
+int main() {
+    int N, X;
+    cin >> N >> X;
+
+    int A[N];
+    for (int i = 0; i < N; ++i) {
+        cin >> A[i];
+    }
+
+    shiftArrayRight(A, N, X);
+
+    return 0;
+}
