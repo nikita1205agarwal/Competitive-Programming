@@ -1,4 +1,5 @@
 #include <iostream>
+using namespace std;
 
 void shiftZeros(int A[], int N) {
     int count = 0; // Count of non-zero elements
