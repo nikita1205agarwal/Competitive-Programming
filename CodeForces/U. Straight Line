@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double X1, Y1, X2, Y2, X3, Y3;
+    cin >> X1 >> Y1 >> X2 >> Y2 >> X3 >> Y3;
+    if (((Y2 - Y1) / (X2 - X1)) == ((Y3 - Y2) / (X3 - X2)))
+        cout << "YES" << "\n";
+    else 
+        cout << "NO" << "\n";
+
+    return 0;
+}
